@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-brand-900: #0a1628;
+    --color-brand-800: #122040;
+    --color-brand-700: #1a2e5a;
+    --color-brand-600: #1e3a6e;
+    --color-brand-500: #2251a3;
+    --color-brand-400: #3b6fd4;
+    --color-brand-300: #6b9de8;
+    --color-accent-500: #c8860a;
+    --color-accent-400: #e9a020;
+    --color-accent-300: #f2b83b;
+    --color-neutral-50: #f8f9fa;
+    --color-neutral-100: #f1f3f5;
+    --color-neutral-200: #e9ecef;
+    --color-neutral-300: #dee2e6;
+    --color-neutral-600: #6c757d;
+    --color-neutral-700: #495057;
+    --color-neutral-900: #212529;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-brand-500);
+    outline-offset: 2px;
+  }
+
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-28;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-none bg-brand-600 px-6 py-3 text-sm font-semibold tracking-wide text-white transition-colors duration-200 hover:bg-brand-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 disabled:opacity-50;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-none border border-brand-600 px-6 py-3 text-sm font-semibold tracking-wide text-brand-600 transition-colors duration-200 hover:bg-brand-600 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 disabled:opacity-50;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-neutral-700 transition-colors duration-200 hover:text-brand-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
+  }
+
+  .heading-display {
+    @apply text-4xl font-bold leading-tight tracking-tight text-brand-900 sm:text-5xl lg:text-6xl;
+  }
+
+  .heading-1 {
+    @apply text-3xl font-bold leading-tight tracking-tight text-brand-900 sm:text-4xl lg:text-5xl;
+  }
+
+  .heading-2 {
+    @apply text-2xl font-bold leading-snug tracking-tight text-brand-900 sm:text-3xl;
+  }
+
+  .heading-3 {
+    @apply text-xl font-semibold leading-snug text-brand-900 sm:text-2xl;
+  }
+
+  .body-lg {
+    @apply text-base leading-relaxed text-neutral-600 sm:text-lg;
+  }
+
+  .body-base {
+    @apply text-sm leading-relaxed text-neutral-600 sm:text-base;
+  }
+
+  .label-overline {
+    @apply text-xs font-semibold uppercase tracking-widest text-accent-500;
+  }
+}

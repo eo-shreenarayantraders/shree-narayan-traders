@@ -26,6 +26,9 @@ export default function HomePage() {
         <p className="body-lg mx-auto max-w-xl text-neutral-600">
           Official Website
         </p>
+        <p className="body-lg mx-auto max-w-xl text-neutral-600">
+          feature shaurya007.ß
+        </p>
       </section>
     </div>
   );
